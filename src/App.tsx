@@ -1,30 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Button } from 'react-bootstrap'
+import './App.css';
+import Header from './components/nav';
+import Vehicles from './components/Vehicles';
+import Characters from './components/Characters';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <Button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+    
+      <div className='container-fluid mt-3'>
+        <Header />
+    
+        <div className='row'>
+      
+            <Routes>
+              <Route path='/' element={ <Characters /> } />
+              <Route path='/vehicles' element={<Vehicles />} />
+            </Routes>
+       </div>
       </div>
     
     </>
