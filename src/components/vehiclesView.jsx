@@ -20,7 +20,7 @@ function VehiclesView() {
   return (  
     <>
 
-<div className="card flex-row border-0 my-3 justify-content-center"><img className="card-img-left" style={{ width: '20rem' }} src="https://images.unsplash.com/photo-1682702578726-bb6de39cce67?q=80&w=2980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+<div className="card flex-row border-0 my-3 ms-5"><img className="card-img-left" style={{ width: '20rem' }} src="https://images.unsplash.com/photo-1682702578726-bb6de39cce67?q=80&w=2980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
   <div className="card-body">
     <h4 className="card-title h5 h4-sm">{currentVehicle.name}</h4>
     <span className="card-text" style={{ fontWeight: 'bold' }}>Model: </span>

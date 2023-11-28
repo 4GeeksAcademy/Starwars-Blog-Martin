@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import Header from './components/nav';
+import PlanetView from './components/PlanetView';
 import VehiclesView from './components/VehiclesView';
 import Vehicles from './components/Vehicles';
 import Characters from './components/Characters';
@@ -44,7 +45,7 @@ function App() {
   return (
     <>
     
-      <div className='container-fluid mt-3'>
+      <div className='container-fluid p-0'>
         <Header />
     
         <div className='row'>
@@ -54,6 +55,7 @@ function App() {
               <Route path='/vehicles' element={<Vehicles data={ vehicles } />} />
               <Route path='/vehicles/:vehicleId' element={<VehiclesView data={ vehicles } />} />
               <Route path='/planets' element={<Planets data={ planets } />} />
+              <Route path='/planets/:planetId' element={<PlanetView data={ planets } />} />
             </Routes>
        </div>
       </div>

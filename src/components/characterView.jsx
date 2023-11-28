@@ -20,7 +20,7 @@ function CharacterView() {
   return (  
     <>
 
-<div className="card flex-row border-0 my-3 justify-content-center"><img className="card-img-left" style={{ width: '20rem' }} src="https://images.unsplash.com/flagged/photo-1589829482673-03413c918c48?q=80&w=3142&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+<div className="card flex-row border-0 my-3 ms-5"><img className="card-img-left" style={{ width: '20rem' }} src="https://images.unsplash.com/flagged/photo-1589829482673-03413c918c48?q=80&w=3142&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
   <div className="card-body">
     <h4 className="card-title h5 h4-sm">{character.name}</h4>
     <span className="card-text" style={{ fontWeight: 'bold' }}>Gender: </span>

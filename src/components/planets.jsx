@@ -1,4 +1,5 @@
 import {Button, Card} from 'react-bootstrap/';
+import { Link } from 'react-router-dom';
 
 function Planets({ data }) {
 
@@ -7,7 +8,7 @@ function Planets({ data }) {
     { data.map((planets, id ) => {
       return (
       
-    <Card key={id} className='col-md-4 p-0 mx-auto my-3' style={{ width: '17rem' }}>
+    <Card key={`${id}`} className='col-md-4 p-0 mx-auto my-3' style={{ width: '17rem' }}>
       <Card.Img variant="top" src="https://images.unsplash.com/photo-1614313913007-2b4ae8ce32d6?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
       <Card.Body>
         <Card.Title className='d-flex align-items-center'>
@@ -21,12 +22,14 @@ function Planets({ data }) {
         <Card.Text>
           Click the button below to learn more about this planet!
         </Card.Text>
-        <Button variant="primary">More Info</Button>
+        <Link to= {`${id + 1}`}><Button variant="primary">More Info</Button></Link>
         </Card.Body>
     </Card>
+   
       )
 })
 }
+
 </>
   )
 }
