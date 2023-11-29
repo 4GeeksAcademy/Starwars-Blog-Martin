@@ -9,6 +9,7 @@ import CharacterView from './components/characterView'
 import Planets from './components/Planets';
 import { Routes, Route } from 'react-router-dom';
 
+
 function App() {
   const [people, setPeople] = useState ([]);
   const [vehicles, setVehicles] = useState ([]);
