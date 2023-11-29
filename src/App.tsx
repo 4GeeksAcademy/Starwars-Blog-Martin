@@ -1,12 +1,12 @@
 import './App.css';
 import { useState, useEffect} from 'react';
 import Header from './components/nav';
-import PlanetView from './components/PlanetView';
-import VehiclesView from './components/VehiclesView';
-import Vehicles from './components/Vehicles';
-import Characters from './components/Characters';
+import PlanetView from './components/planetView';
+import VehiclesView from './components/vehiclesView';
+import Vehicles from './components/vehicles';
+import Characters from './components/characters';
 import CharacterView from './components/characterView'
-import Planets from './components/Planets';
+import Planets from './components/planets';
 import { Routes, Route } from 'react-router-dom';
 
 
