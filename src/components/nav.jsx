@@ -4,9 +4,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { FavoritesConsumer, FavoritesContext } from './favoritesContext';
+import { useContext } from 'react';
 
 
 function Header() {
+  const { store } = useContext(FavoritesContext);
   return (
     <>
       <Navbar bg="dark" data-bs-theme="dark">
@@ -17,7 +20,12 @@ function Header() {
             <Link to= '/vehicles'><Button variant="info" className='me-2'>Vehicles</Button></Link>
             <Link to= '/planets'><Button variant="info">Planets</Button></Link>
             <NavDropdown title="Favorites" id="basic-nav-dropdown">
-             <NavDropdown.Item>Name</NavDropdown.Item>      
+                {
+                  store.favorites.map((people) => {
+                        return <NavDropdown.Item key={`${people.url}`}>{people.name}</NavDropdown.Item>
+                  })
+                  
+                }    
             </NavDropdown>
           </Nav>
         </Container>
