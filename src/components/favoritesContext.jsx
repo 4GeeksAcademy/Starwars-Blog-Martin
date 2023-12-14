@@ -8,12 +8,12 @@ export const FavoritesWrapper = (props) => {
 		favorites: []
 	});
 	const [ actions ] = useState({
-        addFavorites: (character) => {
+        addFavorites: (entity) => {
                setStore(({favorites}) => {
-                const match = favorites.find((fav) => fav.url === character.url)
+                const match = favorites.find((fav) => fav.created === entity.created)
                 if (!match) {
                     return {
-                        favorites: [...favorites, character]
+                        favorites: [...favorites, entity]
 
                 }
             }
@@ -22,7 +22,7 @@ export const FavoritesWrapper = (props) => {
         })
     }
     });
-
+    console.log('Favorites: ', store)
 	
 	return (
 		<FavoritesContext.Provider value={{ store, actions }}>

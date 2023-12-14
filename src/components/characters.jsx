@@ -1,6 +1,6 @@
 import {Button, Card} from 'react-bootstrap/';
 import { Link } from 'react-router-dom';
-import { FavoritesContext, FavoritesWrapper } from './favoritesContext';
+import { FavoritesContext } from './favoritesContext';
 import { useContext } from 'react';
 
 function Characters({ data }) {

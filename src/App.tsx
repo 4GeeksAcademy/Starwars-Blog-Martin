@@ -17,9 +17,9 @@ function App() {
  
   useEffect(() => {
     const getPeople = async () => {
-      const res = await fetch("https://swapi.py4e.com/api/people/");
+      const res = await fetch("https://flask-rest-hello-omwf.onrender.com/people/");
       const data = await res.json();
-      setPeople(data.results)
+      setPeople(data)
     }
 
     const getVehicles = async () => {
@@ -28,9 +28,9 @@ function App() {
       setVehicles(data.results)
     }
     const getPlanets = async () => {
-      const res = await fetch("https://swapi.py4e.com/api/planets/");
+      const res = await fetch("https://flask-rest-hello-omwf.onrender.com/planets/");
       const data = await res.json();
-      setPlanets(data.results)
+      setPlanets(data)
     }
 
     getPeople();

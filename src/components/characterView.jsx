@@ -9,7 +9,7 @@ function CharacterView() {
 
     useEffect(() => {
         const getCharacter = async () => {
-          const res = await fetch(`https://swapi.py4e.com/api/people/${characterId}`);
+          const res = await fetch(`https://flask-rest-hello-omwf.onrender.com/people/${characterId}`);
           const data = await res.json();
           setCharacter(data)
         }
@@ -17,6 +17,7 @@ function CharacterView() {
        getCharacter();
 
       }, [])
+      console.log('Character: ', character)
   return (  
     <>
 
@@ -26,11 +27,7 @@ function CharacterView() {
     <span className="card-text" style={{ fontWeight: 'bold' }}>Gender: </span>
     <span className="card-text text-capitalize">{character.gender}</span><br />
     <span className="card-text" style={{ fontWeight: 'bold' }}>Height: </span>
-    <span className="card-text text-capitalize">{character.height} cm</span><br />
-    <span className="card-text" style={{ fontWeight: 'bold' }}>Hair Color: </span>
-    <span className="card-text text-capitalize">{character.hair_color}</span><br />
-    <span className="card-text" style={{ fontWeight: 'bold' }}>Eyes Color: </span>
-    <span className="card-text text-capitalize">{character.eye_color}</span><br />
+    <span className="card-text text-capitalize">{character.height}</span><br />
     <div className='my-3'>
     <Link to= '/'><Button variant="secondary">Back to Characters</Button></Link>
     </div>

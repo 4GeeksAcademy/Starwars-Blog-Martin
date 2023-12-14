@@ -9,7 +9,7 @@ function PlanetView() {
 
     useEffect(() => {
         const getPlanet = async () => {
-          const res = await fetch(`https://swapi.py4e.com/api/planets/${planetId}`);
+          const res = await fetch(`https://flask-rest-hello-omwf.onrender.com/planets/${planetId}`);
           const data = await res.json();
           setPlanet(data)
         }
@@ -17,6 +17,7 @@ function PlanetView() {
        getPlanet();
 
       }, [])
+      console.log('InPlanetView: ', planet)
   return (  
     <>
 
@@ -27,9 +28,7 @@ function PlanetView() {
     <span className="card-text text-capitalize">{planet.climate}</span><br />
     <span className="card-text" style={{ fontWeight: 'bold' }}>Population: </span>
     <span className="card-text text-capitalize">{planet.population}</span><br />
-    <span className="card-text" style={{ fontWeight: 'bold' }}>Terrain: </span>
-    <span className="card-text text-capitalize">{planet.terrain}</span><br />
-    
+        
     <div className='my-3'>
     <Link to= '/planets'><Button variant="secondary">Back to Planets</Button></Link>
     </div>

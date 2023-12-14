@@ -17,12 +17,11 @@ function Header() {
           <Navbar.Brand className='ms-5'>Starwars Databank</Navbar.Brand>
           <Nav className="me-auto">
             <Link to= '/'><Button variant="info" className='me-2'>Characters</Button></Link>
-            <Link to= '/vehicles'><Button variant="info" className='me-2'>Vehicles</Button></Link>
             <Link to= '/planets'><Button variant="info">Planets</Button></Link>
             <NavDropdown title="Favorites" id="basic-nav-dropdown">
                 {
                   store.favorites.map((people) => {
-                        return <NavDropdown.Item key={`${people.url}`}>{people.name}</NavDropdown.Item>
+                        return <NavDropdown.Item key={`${people.created}`}>{people.name}</NavDropdown.Item>
                   })
                   
                 }    
